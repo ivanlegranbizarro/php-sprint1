@@ -85,12 +85,24 @@ aside {
 }
 
 .side-article {
-  background-color: yellow;
+  background-color: gold;
   height: 2vh;
 }
 
-footer{
+footer {
   border: 10px solid;
   background-color: goldenrod;
   height: 3.4vh;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    border: 10px solid yellow;
+    background-color: yellow;
+    flex-wrap: wrap;
+  }
+
+  main{
+    min-width: 100%;
+  }
 }
