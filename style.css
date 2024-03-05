@@ -1,3 +1,40 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
 .contenedor {
   max-width: 1200px;
+}
+
+nav{
+  border: 10px solid;
+}
+.nav-superior{
+display: flex;
+border-bottom: 10px solid black;
+}
+
+.nav-inferior{
+  display: flex;
+}
+
+.caja-nav-superior{
+  border: 10px solid darkgray;
+  background-color: tomato;
+  flex-grow: 1;
+  height: 4vh;
+}
+
+.caja-nav-superior--grande{
+  flex-grow: 3;
+}
+
+.caja-nav-inferior{
+  background-color: yellow;
+  flex-grow: 1;
+  border: 10px solid orange;
+  height: 4vh;
 }
