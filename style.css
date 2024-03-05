@@ -106,3 +106,16 @@ footer {
     min-width: 100%;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .nav-superior {
+    flex-wrap: wrap;
+  }
+  .caja-nav-superior {
+    min-width: 100%;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
