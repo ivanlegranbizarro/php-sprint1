@@ -1,5 +1,7 @@
 :root {
   --gris-oscuro-que-te-cagas: rgb(66, 65, 65);
+  --gris-oscuro-pero-no-te-cagas: rgb(105, 103, 103);
+  --azul-misterioso-a-mas-no-poder: rgb(50, 50, 198);
 }
 
 * {
@@ -12,32 +14,83 @@
   max-width: 1200px;
 }
 
-nav{
+nav {
   border: 10px solid;
-}
-.nav-superior{
-display: flex;
-border-bottom: 5px solid var(--gris-oscuro-que-te-cagas);
+  margin-bottom: 10px;
 }
 
-.nav-inferior{
+.nav-superior {
+  display: flex;
+  border-bottom: 5px solid var(--gris-oscuro-que-te-cagas);
+  ;
+}
+
+.nav-inferior {
   display: flex;
 }
 
-.caja-nav-superior{
+.caja-nav-superior {
   border: 10px solid var(--gris-oscuro-que-te-cagas);
   background-color: tomato;
   flex-grow: 1;
   height: 4vh;
 }
 
-.caja-nav-superior--grande{
+.caja-nav-superior--grande {
   flex-grow: 3;
 }
 
-.caja-nav-inferior{
+.caja-nav-inferior {
   background-color: yellow;
   flex-grow: 1;
   border: 10px solid orange;
   height: 4vh;
+}
+
+.main-container {
+  display: flex;
+  background-color: black;
+  border: 10px solid;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 3;
+  background-color: var(--gris-oscuro-pero-no-te-cagas);
+  gap: 10px;
+  padding: 10px;
+}
+
+.article {
+  background-color: var(--azul-misterioso-a-mas-no-poder);
+  min-width: 45%;
+  flex-grow: 1;
+  height: 2vh;
+}
+
+.article:last-child {
+  background-color: steelblue;
+}
+
+aside {
+  background-color: crimson;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.side-article {
+  background-color: yellow;
+  height: 2vh;
+}
+
+footer{
+  border: 10px solid;
+  background-color: chocolate;
+  height: 3vh;
 }
