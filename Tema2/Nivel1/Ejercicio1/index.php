@@ -24,5 +24,5 @@ const MY_NAME = 'Iván Legrán';
 
 echo '<h1>' . MY_NAME . '</h1>'. '<br>';
 
-// O bien esto, no sé a qué se refiere con formato título xD:
+// O bien esto, no sé a qué se refiere con formato título:
 echo ucwords(MY_NAME);
