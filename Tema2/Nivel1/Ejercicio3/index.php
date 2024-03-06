@@ -53,7 +53,25 @@ echo "La resta de $n y $m es: $resta" . '<br>';
 echo "El producto de $n y $m es: $producto" . '<br>';
 echo "El módulo de $n y $m es: $modulo" . '<br>';
 
-echo "El doble $x es: " . $x*2. . '<br>';
-echo "El doble $y es: " . $y*2. . '<br>';
-echo "El doble $n es: " . $n*2. . '<br>';
-echo "El doble $m es: " . $m*2. . '<br>';
+echo "El doble $x es: " . $x * 2. . '<br>';
+echo "El doble $y es: " . $y * 2. . '<br>';
+echo "El doble $n es: " . $n * 2. . '<br>';
+echo "El doble $m es: " . $m * 2. . '<br>';
+
+echo "La suma de $x, $y, $n y $m es: " . ($x + $y + $n + $m) . '<br>';
+echo "El producto de $x, $y, $n y $m es: " . ($x * $y * $n * $m) . '<br>';
+
+function calculadora($num1, $num2, $operacion)
+{
+  return match ($operacion) {
+    'suma' => $num1 + $num2 . '<br>',
+    'resta' => $num1 - $num2 . '<br>',
+    'producto' => $num1 * $num2 . '<br>',
+    'modulo' => $num1 % $num2 . '<br>',
+    'division' => $num1 / $num2 . '<br>',
+    default => 'Operación no válida: Introduce suma, resta, producto, modulo o division',
+  };
+}
+
+
+echo calculadora(5, 2, 'suma');
