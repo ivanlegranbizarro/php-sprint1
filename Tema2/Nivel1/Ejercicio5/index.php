@@ -16,7 +16,7 @@ function verificarGrado($nota)
     $nota >= 45 => 'Segona Divisió',
     $nota >= 33 => 'Tercera Divisió',
     $nota < 33 => 'Reprova',
-    default => 'Nota incorrecta. Por favor, introduce un valor entre 0 y 100',
+    default => 'Nota incorrecta. Siusplau, introduïu una nota entre 0 i 100',
   };
 }
 
