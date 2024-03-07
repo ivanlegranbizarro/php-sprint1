@@ -7,17 +7,15 @@ function cribaEratostenes($num)
   for ($i = 2; $i <= $num; $i++) {
     $candidats[] = $i;
   }
-  $num_prim = $candidats[0];
 
   do {
+    $num_prim = $candidats[0];
     foreach ($candidats as $candidat) {
-      if ($candidat % $num_prim == 0) {
+      if ($candidat % $num_prim == 0 and $candidat != $num_prim) {
         unset($candidats[array_search($candidat, $candidats)]);
       }
     }
-  } while (pow($candidats[0], 2) < $num);
-
-
+  } while ($candidats[0] ** 2 <= $num);
 
   return implode(', ', $candidats);
 }
