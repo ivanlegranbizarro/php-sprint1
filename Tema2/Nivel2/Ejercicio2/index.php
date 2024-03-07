@@ -32,3 +32,6 @@ function calculadoraBotigaPocaVarietatLaVeritat($numXocolates = 0, $numXiclets =
 {
   return xocolata($numXocolates) + xiclets($numXiclets) + caramels($numCaramels);
 }
+
+
+echo calculadoraBotigaPocaVarietatLaVeritat(2, 1, 1);
