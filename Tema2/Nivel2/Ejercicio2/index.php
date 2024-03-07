@@ -15,8 +15,20 @@ Sent, per tant, el total, 4. */
 
 function xocolata($numXocolates)
 {
+  return $numXocolates * 1;
 }
 
-function calculadoraBotigaPocaVarietatLaVeritat()
+function xiclets($numXiclets)
 {
+  return $numXiclets * 0.5;
+}
+
+function caramels($numCaramels)
+{
+  return $numCaramels * 1.5;
+}
+
+function calculadoraBotigaPocaVarietatLaVeritat($numXocolates = 0, $numXiclets = 0, $numCaramels = 0)
+{
+  return xocolata($numXocolates) + xiclets($numXiclets) + caramels($numCaramels);
 }
