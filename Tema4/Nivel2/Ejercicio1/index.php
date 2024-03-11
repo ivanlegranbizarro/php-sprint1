@@ -11,3 +11,36 @@ Realitza una aplicació que permeti tirar cinc daus de pòquer alhora.
 A més, programa el mètode getTotalThrows que ha de mostrar el nombre total de tirades entre tots els daus. */
 
 declare(strict_types=1);
+
+
+class PockerDice
+{
+  public function __construct(private int $dau = 0)
+  {
+  }
+
+  public function throw(): string
+  {
+    $this->dau = rand(1, 6);
+    return match ($this->dau) {
+      1 => 'As',
+      2 => 'K',
+      3 => 'Q',
+      4 => 'J',
+      5 => '7',
+      6 => '8',
+    };
+  }
+}
+
+function tirarHastaCincoDados(int $numDados = 1): string
+{
+  $dados = [];
+  for ($i = 0; $i < $numDados; $i++) {
+    $dados[] = (new PockerDice())->throw();
+  }
+
+  return implode(', ', $dados);
+}
+
+echo tirarHastaCincoDados(5);
