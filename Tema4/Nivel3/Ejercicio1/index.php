@@ -54,3 +54,15 @@ class Cine
     echo "La película con mayor duración es $nombrePeliMayorDuracion con $mayorDuracion minutos" . '<br>';
   }
 }
+
+function buscarPelis(Cine ...$cines, string $director): string
+{
+  foreach ($cines as $cine) {
+    foreach ($cine->pelis as $peli) {
+      if ($peli->director == $director) {
+        return 'La peli ' . $peli->nombre . ' se proyecta en el cine ' . $cine->nombre;
+      }
+    }
+  }
+  return 'La peli no existe o no se proyecta en ninguno de nuestros cines';
+}
