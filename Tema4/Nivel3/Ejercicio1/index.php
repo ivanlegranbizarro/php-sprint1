@@ -12,14 +12,14 @@ declare(strict_types=1);
 
 class Peli
 {
-  public function __construct(private string $nombre, private int|float $duracion, private string $director)
+  public function __construct(public string $nombre, public int|float $duracion, public string $director)
   {
   }
 }
 
 class Cine
 {
-  public function __construct(private string $nombre, private string $poblacion, private array $pelis = [])
+  public function __construct(public string $nombre, public string $poblacion, public array $pelis = [])
   {
   }
 
@@ -74,5 +74,4 @@ $peli2 = new Peli('Terminator 2', 140, 'James Cameron');
 $cine1 = new Cine('Cine Capri', 'El Prat de Llobregat', [$peli1, $peli2]);
 
 
-var_dump($peli1);
-var_dump($cine1);
+echo buscarPelis('Peter Jackson', $cine1);
