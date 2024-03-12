@@ -55,7 +55,7 @@ class Cine
   }
 }
 
-function buscarPelis(Cine ...$cines, string $director): string
+function buscarPelis(string $director, Cine ...$cines): string
 {
   foreach ($cines as $cine) {
     foreach ($cine->pelis as $peli) {
@@ -66,3 +66,13 @@ function buscarPelis(Cine ...$cines, string $director): string
   }
   return 'La peli no existe o no se proyecta en ninguno de nuestros cines';
 }
+
+
+$peli1 = new Peli('El señor de los anillos', 180, 'Peter Jackson');
+$peli2 = new Peli('Terminator 2', 140, 'James Cameron');
+
+$cine1 = new Cine('Cine Capri', 'El Prat de Llobregat', [$peli1, $peli2]);
+
+
+var_dump($peli1);
+var_dump($cine1);
