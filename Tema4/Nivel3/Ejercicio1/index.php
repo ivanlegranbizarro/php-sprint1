@@ -10,9 +10,47 @@ A més, pots aprofitar aquest exercici per treballar una bona presentació amb H
 
 declare(strict_types=1);
 
+class Peli
+{
+  public function __construct(private string $nombre, private int|float $duracion, private string $director)
+  {
+  }
+}
+
 class Cine
 {
-  public function __construct(protected string $nom, protected string $poblacion, protected array $pelis = [])
+  public function __construct(private string $nombre, private string $poblacion, private array $pelis = [])
   {
+  }
+
+  public function renombrarCine(string $nombre): void
+  {
+    $this->nombre = $nombre;
+  }
+
+  public function agregarPeli(Peli $peli): void
+  {
+    $this->pelis[] = $peli;
+  }
+
+  public function mostrarDatosPelis(): void
+  {
+    foreach ($this->pelis as $peli) {
+      echo $peli->nombre . '<br>';
+      echo $peli->duracion . '<br>';
+      echo $peli->director . '<br>';
+    }
+  }
+
+  public function mayorDuracion(): void
+  {
+    $mayorDuracion = 0;
+    foreach ($this->pelis as $peli) {
+      if ($peli->duracion > $mayorDuracion) {
+        $mayorDuracion = $peli->duracion;
+        $nombrePeliMayorDuracion = $peli->nombre;
+      }
+    }
+    echo "La película con mayor duración es $nombrePeliMayorDuracion con $mayorDuracion minutos" . '<br>';
   }
 }
