@@ -32,11 +32,28 @@ Per exemple:
 
 Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per “h” però fals si preguntem per “l”. */
 
+$paraules = ['hola', 'Caracola'];
 
-function detectarCaracter(string $caracter, array $array): bool
+echo 'Detectar carácter: ' . '<br>';
+function detectarCaracter(string $caracter, array $paraules): bool
 {
-  return in_array($caracter, $array);
+  $paraules_que_contenen = [];
+  foreach ($paraules as $paraula) {
+    if (strpos($paraula, $caracter) !== false) {
+      $paraules_que_contenen[] = $paraula;
+    }
+  }
+  if (count($paraules) == count($paraules_que_contenen)) {
+    return true;
+  }
+  return false;
 }
+
+
+echo detectarCaracter('a', $paraules) . '<br>';
+echo detectarCaracter('h', $paraules) . '<br>';
+
+
 
 /* - Exercici 4
 Fes un array associatiu que representi informació de tu mateix/a. En concret ha d’incloure:
