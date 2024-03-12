@@ -7,6 +7,10 @@ Crea un array, afegeix-li 5 nombres enters i després mostrals per pantalla d’
 
 $numeros = [1, 2, 3, 4, 5];
 
+foreach ($numeros as $numero) {
+  echo $numero . '<br>';
+}
+
 /* - Exercici 2
 $X = array (10, 20, 30, 40, 50,60);
 Mostrar per pantalla la mida de l’array anterior i posteriorment elimina un element de l’array anterior. Després d'eliminar l'element, les claus senceres han de ser normalitzades(s’han de reorganitzar els seus índexs). Mostra per última vegada la mida de l’array. */
@@ -28,11 +32,28 @@ Per exemple:
 
 Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per “h” però fals si preguntem per “l”. */
 
+$paraules = ['hola', 'Caracola'];
 
-function detectarCaracter(string $caracter, array $array): bool
+echo 'Detectar carácter: ' . '<br>';
+function detectarCaracter(string $caracter, array $paraules): bool
 {
-  return in_array($caracter, $array);
+  $paraules_que_contenen = [];
+  foreach ($paraules as $paraula) {
+    if (strpos($paraula, $caracter) !== false) {
+      $paraules_que_contenen[] = $paraula;
+    }
+  }
+  if (count($paraules) == count($paraules_que_contenen)) {
+    return true;
+  }
+  return false;
 }
+
+
+echo detectarCaracter('a', $paraules) . '<br>';
+echo detectarCaracter('h', $paraules) . '<br>';
+
+
 
 /* - Exercici 4
 Fes un array associatiu que representi informació de tu mateix/a. En concret ha d’incloure:
