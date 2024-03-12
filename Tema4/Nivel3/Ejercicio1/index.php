@@ -9,3 +9,10 @@ Implementa una funció que cerqui pel nom del director/a pel·lícules en difere
 A més, pots aprofitar aquest exercici per treballar una bona presentació amb HTML+CSS que doni suport a la lògica. */
 
 declare(strict_types=1);
+
+class Cine
+{
+  public function __construct(protected string $nom, protected string $poblacion, protected array $pelis = [])
+  {
+  }
+}
