@@ -36,9 +36,9 @@ class Cine
   public function mostrarDatosPelis(): void
   {
     foreach ($this->pelis as $peli) {
-      echo $peli->nombre . '<br>';
-      echo $peli->duracion . '<br>';
-      echo $peli->director . '<br>';
+      echo "<h1>$peli->nombre</h1>";
+      echo "<p>Duracion: $peli->duracion</p>";
+      echo "<p>Director: $peli->director</p>";
     }
   }
 
@@ -51,20 +51,21 @@ class Cine
         $nombrePeliMayorDuracion = $peli->nombre;
       }
     }
-    echo "La película con mayor duración es $nombrePeliMayorDuracion con $mayorDuracion minutos" . '<br>';
+    echo "La película con mayor duración es $nombrePeliMayorDuracion con $mayorDuracion minutos de metraje" . '<br>';
   }
 }
 
-function buscarPelis(string $director, Cine ...$cines): string
+function buscarPelis(string $director, Cine ...$cines): void
 {
   foreach ($cines as $cine) {
     foreach ($cine->pelis as $peli) {
       if ($peli->director == $director) {
-        return 'La peli ' . $peli->nombre . ' se proyecta en el cine ' . $cine->nombre;
+        echo 'La peli ' . $peli->nombre . ' se proyecta en el cine ' . $cine->nombre . '<br>';
+        exit;
       }
     }
   }
-  return 'La peli no existe o no se proyecta en ninguno de nuestros cines';
+  echo 'La peli no existe o no se proyecta en ninguno de nuestros cines <br>';
 }
 
 
@@ -73,5 +74,8 @@ $peli2 = new Peli('Terminator 2', 140, 'James Cameron');
 
 $cine1 = new Cine('Cine Capri', 'El Prat de Llobregat', [$peli1, $peli2]);
 
+$cine1->mostrarDatosPelis();
+$cine1->mayorDuracion();
 
-echo buscarPelis('Peter Jackson', $cine1);
+
+buscarPelis('Peter Jackson', $cine1);
