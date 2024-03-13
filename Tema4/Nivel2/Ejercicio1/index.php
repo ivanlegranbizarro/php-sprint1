@@ -68,3 +68,12 @@ function tirarHastaCincoDados(int $numeroDados = 1): void
     $dados[$i]->throw();
   }
 }
+
+$dado1 = new PockerDice();
+
+$dado1->throw();
+$dado1->throw();
+
+tirarHastaCincoDados(3);
+
+echo 'Número total de tiradas entre los dados: ' . PockerDice::getTotalThrows();
