@@ -10,16 +10,6 @@ Realitza una aplicació que permeti tirar cinc daus de pòquer alhora.
 
 A més, programa el mètode getTotalThrows que ha de mostrar el nombre total de tirades entre tots els daus. */
 
-//TODO: Sobre el nivel 2:
-
-/* Necesitaríamos algo para contar las tiradas totales.
-Apenas separas la creación de los dados de su tirada. De hecho, no separas la tirada del muestreo de la cara que ha salido, que es parte del enunciado.
-Respecto a como representas las caras del dado, bueno, puedes estar bien ese match!
-Sobre el nivel 3:
-
-La lógica es correcta, te recomiendo que separes la lógica en distintos ficheros.
-Faltaría solo la parte gráfica. */
-
 declare(strict_types=1);
 
 
