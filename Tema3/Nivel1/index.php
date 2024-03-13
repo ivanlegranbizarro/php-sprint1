@@ -34,6 +34,7 @@ Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per �
 
 $paraules = ['hola', 'Caracola'];
 
+// TODO: mentor sugiere mejora de eficiencia, chequeando si alguna palabra NO contiene la letra en lugar de chequear si todas la contienen
 echo 'Detectar carácter: ' . '<br>';
 function detectarCaracter(string $caracter, array $paraules): bool
 {
