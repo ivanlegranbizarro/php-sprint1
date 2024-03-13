@@ -3,7 +3,7 @@
 
 declare(strict_types=1);
 
-require_once 'Shape.php';
+require_once '../../classes/Shape.php';
 
 class Triangle extends Shape
 {

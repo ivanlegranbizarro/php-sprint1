@@ -5,18 +5,8 @@ Necessitem crear un tipus de dades que representi un animal. Els animals tenen u
 
 declare(strict_types=1);
 
-class Animal
-{
-  public function __construct(protected string $nom)
-  {
-  }
+require_once '../../classes/Animal.php';
 
-
-  public function makeSound(): string
-  {
-    return "L'animal en qüestió parla el seu idioma";
-  }
-}
 
 class Gos extends Animal
 {

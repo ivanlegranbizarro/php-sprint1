@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 class Shape
 {
   public function __construct(protected int|float $ample, protected int|float $alt)
@@ -13,3 +10,5 @@ class Shape
     return 0;
   }
 }
+
+?>
