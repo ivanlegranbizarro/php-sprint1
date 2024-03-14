@@ -8,14 +8,14 @@ require_once '../../interfaces/AreaCalculation.php';
 
 class Cercle implements AreaCalculation
 {
-  const PI = pi();
   public function __construct(protected float $radio)
   {
   }
 
   public function calculArea(): float
   {
-    return self::PI * pow($this->radio, 2);
+    $area = M_PI * pow($this->radio, 2);
+    return round($area, 2);
   }
 }
 
