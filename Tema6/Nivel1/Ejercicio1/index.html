@@ -11,13 +11,13 @@
 <body>
   <main class="container">
     <h1 style="text-align: center;">Formularis</h1>
-    <br/>
+    <br />
     <form action="dades_formulari.php" method="get">
       <label for="name">Name: </label>
-      <input type="text" name="name" required min="3" max="10" />
+      <input type="text" name="name" required minlength="3" maxlength="10" />
       <br />
       <label for="username">Username: </label>
-      <input type="text" name="username" required min="3" max="10" />
+      <input type="text" name="username" required minlength="3" maxlength="10" />
       <br />
       <input type="submit" value="Submit" />
     </form>
