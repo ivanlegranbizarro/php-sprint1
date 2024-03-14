@@ -4,20 +4,20 @@ Seguint l’exercici anterior, imagina com ampliaries l’estructura que has cre
 
 declare(strict_types=1);
 
-require_once '../../classes/Shape.php';
+require_once '../../interfaces/AreaCalculation.php';
 
-class Cercle extends Shape
+class Cercle implements AreaCalculation
 {
-  public function __construct(public int|float $radi, public float $pi = 3.14159)
+  const PI = pi();
+  public function __construct(protected float $radio)
   {
   }
 
-  public function calculArea(): int|float
+  public function calculArea(): float
   {
-    return $this->pi * $this->radi ** 2;
+    return self::PI * pow($this->radio, 2);
   }
 }
-
 
 $circulo1 = new Cercle(3.2);
 
