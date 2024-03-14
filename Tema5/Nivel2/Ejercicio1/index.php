@@ -20,3 +20,10 @@ class Rectangle extends Shape
     return $this->ample * $this->alt;
   }
 }
+
+
+$triangle1 = new Triangle($ample = 5, $alt = 3.5);
+$rectangle1 = new Rectangle($ample = 5, $alt = 3.5);
+
+echo $triangle1->calculArea() . '<br>';
+echo $rectangle1->calculArea();
