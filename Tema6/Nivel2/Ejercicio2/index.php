@@ -2,6 +2,8 @@
 /* - Exercici 2
 Sobreescriu alguna de les lògiques d’entre tots els mètodes màgics que hi ha (que no sigui __construct) */
 
+declare(strict_types=1);
+
 class SuperGuerrer
 {
   public function __construct(private string $nom, private int $nivell)
