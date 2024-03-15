@@ -10,7 +10,7 @@ class SuperGuerrer
 
   public function __toString()
   {
-    return "El nom del guerrer és $this->nom. Pot transformar-se en Superguerrer de nivell $this->nivell";
+    return "El nom del guerrer és $this->nom. Pot transformar-se en Superguerrer de nivell $this->nivell" . '<br>';
   }
 }
 
