@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-$username = $_POST["username"];
-
-$_SESSION["username"] = $username;
+$_SESSION["username"] = $_POST["username"];
 
 echo 'El username de la sesión es ' . $_SESSION["username"];
