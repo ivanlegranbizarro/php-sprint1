@@ -14,4 +14,25 @@ final class NumberCheckerTest extends TestCase
     $prueba = new NumberChecker(2);
     $this->assertTrue($prueba->isEven());
   }
+
+  #[Test]
+  public function probar_impares()
+  {
+    $prueba = new NumberChecker(3);
+    $this->assertFalse($prueba->isEven());
+  }
+
+  #[Test]
+  public function probar_si_es_positivo()
+  {
+    $prueba = new NumberChecker(2);
+    $this->assertTrue($prueba->isPositive());
+  }
+
+  #[Test]
+  public function probar_si_es_negativo()
+  {
+    $prueba = new NumberChecker(-5);
+    $this->assertFalse($prueba->isPositive());
+  }
 }
