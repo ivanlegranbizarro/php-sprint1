@@ -3,3 +3,5 @@ prueba.css
 prueba.php
 vendor/
 Testing/.phpunit.result.cache
+Testing/Nivel1/Ejercicio1/src/FizzBuzz.php
+Testing/Nivel1/Ejercicio1/tests/unit/FizzBuzzTest.php
