@@ -8,3 +8,6 @@ Fizz Buzz
 Prueba
  [x] Prueba para verificar el funcionamiento de phpunit
 
+Stub Class
+ [ ] Prueba con stub
+
