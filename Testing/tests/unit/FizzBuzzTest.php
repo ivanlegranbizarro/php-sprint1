@@ -16,6 +16,7 @@ final class FizzBuzzTest extends TestCase
     return [
       [1, '1'],
       [3, 'Fizz'],
+      [4, '4'],
       [5, 'Buzz'],
       [15, 'FizzBuzz'],
     ];

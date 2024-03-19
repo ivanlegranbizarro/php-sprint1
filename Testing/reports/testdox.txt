@@ -3,6 +3,7 @@ Fizz Buzz
  [x] Prueba de la función Fizz Buzz with data set #1
  [x] Prueba de la función Fizz Buzz with data set #2
  [x] Prueba de la función Fizz Buzz with data set #3
+ [x] Prueba de la función Fizz Buzz with data set #4
 
 Prueba
  [x] Prueba para verificar el funcionamiento de phpunit
