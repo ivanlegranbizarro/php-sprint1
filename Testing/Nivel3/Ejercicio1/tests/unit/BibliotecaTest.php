@@ -23,7 +23,7 @@ final class BibliotecaTest extends TestCase
       'título' => 'El Quijote',
       'autor' => 'Miguel de Cervantes',
       'ISBN' => '123456789',
-      'género' => 'Romance',
+      'género' => 'Aventuras',
       'páginas' => 1000
     ];
     $agregarLibro = $biblioteca->agregar_libro();
@@ -67,7 +67,7 @@ final class BibliotecaTest extends TestCase
     $this->assertSame('El Quijote', $primer_libro['título']);
     $this->assertSame('Miguel de Cervantes', $primer_libro['autor']);
     $this->assertSame('123456789', $primer_libro['ISBN']);
-    $this->assertSame('Romance', $primer_libro['género']);
+    $this->assertSame('Aventuras', $primer_libro['género']);
     $this->assertSame(1000, $primer_libro['páginas']);
   }
 
