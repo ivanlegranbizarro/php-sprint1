@@ -17,6 +17,8 @@ declare(strict_types=1);
 
 namespace Ejercicio1;
 
+// agregar_libro, borrar_libro, modificar_libro, buscar_libros
+
 enum Genero: string
 {
   case Aventuras = 'Aventuras';
@@ -28,7 +30,21 @@ enum Genero: string
 
 class Biblioteca
 {
-  public function __construct(private string $titulo, private string $autor, private int $isbn, private Genero $genero, private int $paginas)
+  public static array $libros = [];
+  public static int $id = 0;
+
+  public function agregar_libro(string $autor, string $título, string $ISBN, Genero $género, int $páginas): void
   {
+    $libro = [
+      'id' => self::$id++,
+      'autor' => $autor,
+      'título' => $título,
+      'ISBN' => $ISBN,
+      'género' => $género,
+      'páginas' => $páginas
+
+    ];
+
+    self::$libros[] = $libro;
   }
 }
