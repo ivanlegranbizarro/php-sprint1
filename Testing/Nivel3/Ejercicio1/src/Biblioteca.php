@@ -52,6 +52,7 @@ class Biblioteca
         return "El libro se ha eliminado correctamente";
       }
     }
+    return "El libro no se ha encontrado";
   }
 
   public function buscar_libro(string $busqueda): array
