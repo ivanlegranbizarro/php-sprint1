@@ -73,11 +73,9 @@ class Biblioteca
   {
     $libro = $this->buscar_libro($isbn);
 
-    if (is_array($libro)) {
-      foreach ($parametros as $key => $value) {
-        $libro[$key] = $value;
-      }
-      return $libro;
+    foreach ($parametros as $key => $value) {
+      $libro[$key] = $value;
     }
+    return $libro;
   }
 }
