@@ -1,0 +1,19 @@
+{
+    "name": "legran/ejercicio2",
+    "description": "Ejercicio 2 práctica TDD",
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ejercicio2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Iván Legrán",
+            "email": "ivanlegranbizarro@gmail.com"
+        }
+    ],
+    "require": {}
+}
