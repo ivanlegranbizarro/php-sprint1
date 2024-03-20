@@ -10,6 +10,7 @@ class Calificacions
   public function __construct(public int $nota)
   {
   }
+
   function verificarGrado()
   {
     return match (true) {
