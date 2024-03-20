@@ -26,6 +26,7 @@ enum Genero: string
   case RelatoCorto = 'Relato corto';
   case Romantico = 'Romántico';
   case NoFiccion = 'No ficción';
+  case Terror = 'Terror';
 }
 
 class Biblioteca
@@ -57,15 +58,16 @@ class Biblioteca
     }
   }
 
-  public function buscar_libro(string $isbn): array|string
+  public function buscar_libro(string $busqueda): array
   {
-    foreach (self::$libros as $key => $libro) {
-      if ($libro['ISBN'] == $isbn) {
+    foreach (self::$libros as $libro) {
+      if (in_array($busqueda, $libro)) {
         return $libro;
       }
     }
-    return "Libro no encontrado";
+    return [];
   }
+
 
   public function modificar_libro(string $isbn, array $parametros): array|string
   {

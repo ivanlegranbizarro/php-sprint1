@@ -64,31 +64,23 @@ final class BibliotecaTest extends TestCase
     $this->assertSame($libro_modificado['título'], 'El Quijote nueva edición');
   }
 
-  // #[Test]
-  // public function buscar_libro()
-  // {
-  //   $biblioteca = new Biblioteca();
-  //   $parametros_de_busqueda = [
-  //     'título' => 'El Quijote'
-  //   ];
-  //   $libros_encontrados = $biblioteca->consultar_libros($parametros_de_busqueda);
+  #[Test]
+  public function buscar_libro()
+  {
+    $biblioteca = new Biblioteca();
 
-  //   $this->assertNotEmpty($libros_encontrados);
+    $biblioteca->agregar_libro(autor: 'Stephen King', título: 'IT', ISBN: '123456789', género: Genero::Terror, páginas: 1000);
 
-  //   $primer_libro = reset($libros_encontrados);
-  //   $this->assertSame(1, $primer_libro['id']);
-  //   $this->assertSame('El Quijote', $primer_libro['título']);
-  //   $this->assertSame('Miguel de Cervantes', $primer_libro['autor']);
-  //   $this->assertSame('123456789', $primer_libro['ISBN']);
-  //   $this->assertSame('Aventuras', $primer_libro['género']);
-  //   $this->assertSame(1000, $primer_libro['páginas']);
-  // }
+    $busqueda = $biblioteca->buscar_libro('IT');
 
-  // #[Test]
-  // public function libros_grandes()
-  // {
-  //   $biblioteca = new Biblioteca();
-  //   $libros_grandes = $biblioteca->libros_grandes();
-  //   $this->assertGreaterThan(500, $libros_grandes);
-  // }
+    $this->assertEquals($busqueda['título'], 'IT');
+
+    // #[Test]
+    // public function libros_grandes()
+    // {
+    //   $biblioteca = new Biblioteca();
+    //   $libros_grandes = $biblioteca->libros_grandes();
+    //   $this->assertGreaterThan(500, $libros_grandes);
+    // }
+  }
 }
