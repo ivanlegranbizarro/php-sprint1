@@ -31,7 +31,7 @@ class Biblioteca
 {
   public static array $libros = [];
 
-  public function agregar_libro(string $autor, string $título, string $ISBN, Genero $género, int $páginas): array
+  public function agregar_libro(string $autor, string $título, string $ISBN, Genero $género, int $páginas): void
   {
     $libro = [
       'autor' => $autor,
@@ -39,11 +39,9 @@ class Biblioteca
       'ISBN' => $ISBN,
       'género' => $género,
       'páginas' => $páginas
-
     ];
 
     self::$libros[] = $libro;
-    return $libro;
   }
 
   public function borrar_libro(string $isbn): string

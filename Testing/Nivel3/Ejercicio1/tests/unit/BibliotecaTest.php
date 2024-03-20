@@ -19,25 +19,10 @@ final class BibliotecaTest extends TestCase
   public function añadir_un_libro()
   {
     $biblioteca = new Biblioteca();
-    $libro = [
-      'autor' => 'Miguel de Cervantes',
-      'título' => 'El Quijote',
-      'ISBN' => '123456789',
-      'género' => Genero::Aventuras,
-      'páginas' => 1000
-    ];
 
-    // Llama al método agregar_libro() con cada propiedad del libro como argumento individual
-    $agregarLibro = $biblioteca->agregar_libro(
-      $libro['autor'],
-      $libro['título'],
-      $libro['ISBN'],
-      $libro['género'],
-      $libro['páginas']
-    );
+    $biblioteca->agregar_libro(autor: 'El Quijote', título: 'Miguel de Cervantes', ISBN: '123456789', género: Genero::Aventuras, páginas: 1000);
 
-    // Verifica que el libro devuelto sea igual al libro esperado
-    $this->assertSame($agregarLibro, $libro);
+    $this->assertCount(1, $biblioteca::$libros);
   }
 
 
@@ -45,6 +30,7 @@ final class BibliotecaTest extends TestCase
   public function eliminar_un_libro()
   {
     $biblioteca = new Biblioteca();
+    $biblioteca->agregar_libro('El Quijote', 'Miguel de Cervantes', '123456789', Genero::Aventuras, 1000);
     $isbn_libro_a_eliminar = '123456789';
     $libro_eliminado = $biblioteca->borrar_libro($isbn_libro_a_eliminar);
     $this->assertSame($libro_eliminado, "El libro se ha eliminado correctamente");
