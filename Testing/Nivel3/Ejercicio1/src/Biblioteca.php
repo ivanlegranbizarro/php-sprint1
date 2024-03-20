@@ -31,12 +31,10 @@ enum Genero: string
 class Biblioteca
 {
   public static array $libros = [];
-  public static int $id = 0;
 
-  public function agregar_libro(string $autor, string $título, string $ISBN, Genero $género, int $páginas): void
+  public function agregar_libro(string $autor, string $título, string $ISBN, Genero $género, int $páginas): array
   {
     $libro = [
-      'id' => self::$id++,
       'autor' => $autor,
       'título' => $título,
       'ISBN' => $ISBN,
@@ -46,5 +44,6 @@ class Biblioteca
     ];
 
     self::$libros[] = $libro;
+    return $libro;
   }
 }
