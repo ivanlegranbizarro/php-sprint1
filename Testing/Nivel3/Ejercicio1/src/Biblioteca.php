@@ -17,7 +17,7 @@ declare(strict_types=1);
 
 namespace Ejercicio1;
 
-// agregar_libro, borrar_libro, modificar_libro, buscar_libros
+// agregar_libro, borrar_libro, modificar_libro, buscar_libro
 
 enum Genero: string
 {
@@ -54,6 +54,28 @@ class Biblioteca
         unset(self::$libros[$key]);
         return "El libro se ha eliminado correctamente";
       }
+    }
+  }
+
+  public function buscar_libro(string $isbn): array|string
+  {
+    foreach (self::$libros as $key => $libro) {
+      if ($libro['ISBN'] == $isbn) {
+        return $libro;
+      }
+    }
+    return "Libro no encontrado";
+  }
+
+  public function modificar_libro(string $isbn, array $parametros): array|string
+  {
+    $libro = $this->buscar_libro($isbn);
+
+    if (is_array($libro)) {
+      foreach ($parametros as $key => $value) {
+        $libro[$key] = $value;
+      }
+      return $libro;
     }
   }
 }

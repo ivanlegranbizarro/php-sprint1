@@ -50,20 +50,22 @@ final class BibliotecaTest extends TestCase
     $this->assertSame($libro_eliminado, "El libro se ha eliminado correctamente");
   }
 
-  // #[Test]
-  // public function modificar_un_libro()
-  // {
-  //   $biblioteca = new Biblioteca();
-  //   $id_libro_a_modificar = 1;
-  //   $parametros_a_modificar = [
-  //     'título' => 'El Quijote nueva edición',
-  //   ];
-  //   $libro_modificado = $biblioteca->modificar_libro($id_libro_a_modificar, $parametros_a_modificar);
-  //   $this->assertSame($libro_modificado, "El libro se ha modificado correctamente");
-  // }
+  #[Test]
+  public function modificar_un_libro()
+  {
+    $biblioteca = new Biblioteca();
+    $biblioteca->agregar_libro('El Quijote', 'Miguel de Cervantes', '123456789', Genero::Aventuras, 1000);
+    $isbn_libro_a_modificar = '123456789';
+    $parametros_a_modificar = [
+      'título' => 'El Quijote nueva edición',
+    ];
+    $libro_modificado = $biblioteca->modificar_libro($isbn_libro_a_modificar, $parametros_a_modificar);
+
+    $this->assertSame($libro_modificado['título'], 'El Quijote nueva edición');
+  }
 
   // #[Test]
-  // public function buscar_libros()
+  // public function buscar_libro()
   // {
   //   $biblioteca = new Biblioteca();
   //   $parametros_de_busqueda = [
