@@ -17,8 +17,6 @@ declare(strict_types=1);
 
 namespace Ejercicio1;
 
-// agregar_libro, borrar_libro, modificar_libro, buscar_libro
-
 enum Genero: string
 {
   case Aventuras = 'Aventuras';
