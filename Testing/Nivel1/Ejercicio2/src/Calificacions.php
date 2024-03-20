@@ -1,9 +1,8 @@
 <?php
 
-namespace Ejercicio2;
-
 declare(strict_types=1);
 
+namespace Ejercicio2;
 
 class Calificacions
 {
