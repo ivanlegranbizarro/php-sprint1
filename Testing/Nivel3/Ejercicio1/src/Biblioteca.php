@@ -47,7 +47,7 @@ class Biblioteca
     return $libro;
   }
 
-  public function borrar_libro(int $isbn): string
+  public function borrar_libro(string $isbn): string
   {
     foreach (self::$libros as $key => $libro) {
       if ($libro['ISBN'] == $isbn) {
