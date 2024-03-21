@@ -15,12 +15,12 @@ Output
 
 És un nombre d'Armstrong!
 No és un nombre d'Armstrong!
-
-Un número de Amstrong es un tipo de número natural que es igual a la suma de sus propios dígitos elevados a la potencia del número total de dígitos.
 */
 
 declare(strict_types=1);
-
+/**
+ * Un número de Amstrong es un tipo de número natural que es igual a la suma de sus propios dígitos elevados a la potencia del número total de dígitos.
+ */
 function detectarNumAmstrong(int $numero): string
 {
 
