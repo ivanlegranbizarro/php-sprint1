@@ -4,3 +4,5 @@ prueba.php
 vendor/
 Testing/Nivel1/Ejercicio1/src/FizzBuzz.php
 Testing/Nivel1/Ejercicio1/tests/unit/FizzBuzzTest.php
+.idea
+phpunit.phar
