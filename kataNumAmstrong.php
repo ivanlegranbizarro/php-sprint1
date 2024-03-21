@@ -34,7 +34,7 @@ function detectarNumAmstrong(int $numero): string
     }
   }
 
-  return "No ès un nombre d'Armstrong!";
+  return "No és un nombre d'Armstrong!";
 }
 
 echo detectarNumAmstrong(153);
