@@ -30,7 +30,6 @@ final class BibliotecaTest extends TestCase
   public function eliminar_un_libro()
   {
     $biblioteca = new Biblioteca();
-    $biblioteca->agregar_libro('El Quijote', 'Miguel de Cervantes', '123456789', Genero::Aventuras, 1000);
     $isbn_libro_a_eliminar = '123456789';
     $libro_eliminado = $biblioteca->borrar_libro($isbn_libro_a_eliminar);
     $this->assertSame($libro_eliminado, "El libro se ha eliminado correctamente");
@@ -40,7 +39,6 @@ final class BibliotecaTest extends TestCase
   public function modificar_un_libro()
   {
     $biblioteca = new Biblioteca();
-    $biblioteca->agregar_libro('El Quijote', 'Miguel de Cervantes', '123456789', Genero::Aventuras, 1000);
     $isbn_libro_a_modificar = '123456789';
     $parametros_a_modificar = [
       'título' => 'El Quijote nueva edición',
