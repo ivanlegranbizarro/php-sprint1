@@ -75,4 +75,17 @@ class Biblioteca
     }
     return $libro;
   }
+
+  public function buscar_libros_grandes(int $limit = 500): array|string
+  {
+    $libros_grandes = [];
+    foreach (self::$libros as $libro) {
+      if ($libro['páginas'] > $limit) {
+        $libros_grandes[] = $libro;
+      }
+      return $libros_grandes;
+    }
+
+    return 'No hay libros grandes';
+  }
 }

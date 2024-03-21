@@ -60,13 +60,13 @@ final class BibliotecaTest extends TestCase
     $busqueda = $biblioteca->buscar_libro('IT');
 
     $this->assertEquals($busqueda['título'], 'IT');
+  }
 
-    // #[Test]
-    // public function libros_grandes()
-    // {
-    //   $biblioteca = new Biblioteca();
-    //   $libros_grandes = $biblioteca->libros_grandes();
-    //   $this->assertGreaterThan(500, $libros_grandes);
-    // }
+  #[Test]
+  public function buscar_libros_grandes()
+  {
+    $biblioteca = new Biblioteca();
+    $libros_grandes = $biblioteca->buscar_libros_grandes();
+    $this->assertGreaterThan(500, $libros_grandes);
   }
 }
