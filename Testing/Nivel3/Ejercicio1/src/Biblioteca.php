@@ -76,6 +76,11 @@ class Biblioteca
     return $libro;
   }
 
+  /**
+   * Vale, aquí quería reutilizar la función para buscar libros pasándole
+   * como parámetro el límite de 500 páginas, pero no puedo reutilizarla
+   * porque en buscar_libros si devuelvo un array con arrays me fallan los tests xD. Pero que sepas que tengo en cuenta que lo ideal sería reutilizar la función de buscar_libros.
+   */
   public function buscar_libros_grandes(int $limit = 500): array|string
   {
     $libros_grandes = [];
